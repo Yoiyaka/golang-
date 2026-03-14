@@ -1,0 +1,16 @@
+package p0190_reverse_bits
+
+import "testing"
+
+func TestReverseBits(t *testing.T) {
+	// 43261596 = 00000010100101000001111010011100 -> reversed = 964176192 = 00111001011110000010100101000000
+	got := reverseBits(43261596)
+	if got != 964176192 {
+		t.Errorf("got %d, want 964176192", got)
+	}
+	// 4294967293 = 11111111111111111111111111111101 -> reversed = 3221225471 = 10111111111111111111111111111111
+	got2 := reverseBits(4294967293)
+	if got2 != 3221225471 {
+		t.Errorf("got %d, want 3221225471", got2)
+	}
+}
